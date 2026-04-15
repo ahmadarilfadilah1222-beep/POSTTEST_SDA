@@ -293,7 +293,7 @@ int main() {
             case 8: tampilRiwayat(); break;
             case 9: peekStack(); break;
             case 10: resetData(); break;
-            case 0: cout << "\nProgram selesai. Terima kasih!\n"; break;
+            case 0: cout << "\nProgram selesai. Terima kasih!!\n"; break;
             default: cout << "\nPilihan tidak valid!\n";
         }
 
