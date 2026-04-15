@@ -2,7 +2,6 @@
 #include <iomanip>
 using namespace std;
 
-// ================== STRUCT ==================
 struct Hewan {
     int id;
     string nama;
@@ -24,7 +23,6 @@ struct Riwayat {
     Riwayat* next;
 };
 
-// ================== GLOBAL ==================
 Hewan* head = NULL;
 
 Antrian* front = NULL;
@@ -32,7 +30,6 @@ Antrian* rear = NULL;
 
 Riwayat* top = NULL;
 
-// ================== TAMBAH DATA ==================
 void tambahData(Hewan* &head){
     int x;
     cout << "\nJumlah data: ";
@@ -60,7 +57,6 @@ void tambahData(Hewan* &head){
     }
 }
 
-// ================== TAMPIL DATA ==================
 void tampilData(Hewan* head){
     if(head == NULL){
         cout << "\nData kosong!\n";
@@ -84,7 +80,6 @@ void tampilData(Hewan* head){
     }
 }
 
-// ================== ENQUEUE ==================
 void enqueue(Hewan* head){
     if(head == NULL){
         cout << "\nData hewan kosong!\n";
@@ -119,7 +114,6 @@ void enqueue(Hewan* head){
     cout << "\nID tidak ditemukan!\n";
 }
 
-// ================== DEQUEUE ==================
 void dequeue(){
     if(front == NULL){
         cout << "\nAntrian kosong! (Underflow)\n";
@@ -132,7 +126,6 @@ void dequeue(){
     cout << "ID   : " << hapus->id << endl;
     cout << "Nama : " << hapus->nama << endl;
 
-    // PUSH ke stack
     Riwayat* baru = new Riwayat;
     baru->id = hapus->id;
     baru->nama = hapus->nama;
@@ -148,7 +141,6 @@ void dequeue(){
     }
 }
 
-// ================== TAMPIL ANTRIAN ==================
 void tampilAntrian(){
     if(front == NULL){
         cout << "\nAntrian kosong!\n";
@@ -164,7 +156,6 @@ void tampilAntrian(){
     }
 }
 
-// ================== PEEK QUEUE ==================
 void peekQueue(){
     if(front == NULL){
         cout << "\nAntrian kosong!\n";
@@ -176,7 +167,6 @@ void peekQueue(){
     cout << "Nama : " << front->nama << endl;
 }
 
-// ================== POP ==================
 void popRiwayat(){
     if(top == NULL){
         cout << "\nRiwayat kosong! (Underflow)\n";
@@ -190,7 +180,6 @@ void popRiwayat(){
     delete hapus;
 }
 
-// ================== TAMPIL RIWAYAT ==================
 void tampilRiwayat(){
     if(top == NULL){
         cout << "\nRiwayat kosong!\n";
@@ -207,7 +196,6 @@ void tampilRiwayat(){
     }
 }
 
-// ================== PEEK STACK ==================
 void peekStack(){
     if(top == NULL){
         cout << "\nRiwayat kosong!\n";
@@ -218,7 +206,6 @@ void peekStack(){
     cout << top->nama << " - " << top->tindakan << endl;
 }
 
-// ================== RESET ==================
 void resetData(){
     head = NULL;
     front = rear = NULL;
@@ -226,7 +213,6 @@ void resetData(){
     cout << "\nSemua data direset!\n";
 }
 
-// ================== MAIN ==================
 int main(){
     int pilih;
 
