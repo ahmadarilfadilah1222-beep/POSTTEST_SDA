@@ -116,7 +116,7 @@ void enqueue(Hewan* head){
 
 void dequeue(){
     if(front == NULL){
-        cout << "\nAntrian kosong! (Underflow)\n";
+        cout << "\nAntrian kosong!! (Underflow)\n";
         return;
     }
 
